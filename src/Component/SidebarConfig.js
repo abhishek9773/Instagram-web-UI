@@ -10,11 +10,13 @@ const {
   AiFillHeart,
   AiOutlinePlusCircle,
   AiFillPlusCircle,
+  AiOutlineInstagram,
+  AiFillInstagram,
 } = require("react-icons/ai");
 const { CgProfile } = require("react-icons/cg");
 const { RiVideoFill, RiVideoLine } = require("react-icons/ri");
 
-const desine = "text-2xl mr-5";
+const desine = "text-3xl p-3px";
 export const mainu = [
   {
     title: "Home",
