@@ -19,41 +19,41 @@ export const mainu = [
   {
     title: "Home",
     icon: <AiOutlineHome className={desine} />,
-    inactiveIcon: <AiFillHome className={desine} />,
+    activeIcon: <AiFillHome className={desine} />,
   },
   {
     title: "Search",
     icon: <AiOutlineSearch className={desine} />,
-    inactiveIcon: <AiOutlineSearch className={desine} />,
+    activeIcon: <AiOutlineSearch className={desine} />,
   },
   {
     title: "Explore",
     icon: <AiOutlineCompass className={desine} />,
-    inactiveIcon: <AiFillCompass className={desine} />,
+    activeIcon: <AiFillCompass className={desine} />,
   },
   {
     title: "Reels",
     icon: <RiVideoLine className={desine} />,
-    inactiveIcon: <RiVideoFill className={desine} />,
+    activeIcon: <RiVideoFill className={desine} />,
   },
   {
-    title: "message",
+    title: "Message",
     icon: <AiOutlineMessage className={desine} />,
-    inactiveIcon: <AiFillMessage className={desine} />,
+    activeIcon: <AiFillMessage className={desine} />,
   },
   {
     title: "Notification",
     icon: <AiOutlineHeart className={desine} />,
-    inactiveIcon: <AiFillHeart className={desine} />,
+    activeIcon: <AiFillHeart className={desine} />,
   },
   {
     title: "Post",
     icon: <AiOutlinePlusCircle className={desine} />,
-    inactiveIcon: <AiFillPlusCircle className={desine} />,
+    activeIcon: <AiFillPlusCircle className={desine} />,
   },
   {
     title: "Profile",
     icon: <CgProfile className={desine} />,
-    inactiveIcon: <CgProfile className={desine} />,
+    activeIcon: <CgProfile className={desine} />,
   },
 ];
