@@ -4,7 +4,7 @@ import { BiBookmark } from "react-icons/bi";
 import { RiVideoAddLine } from "react-icons/ri";
 import UserPostCard from "./UserPostCard";
 
-const UserPostShow = () => {
+const UserProfileMenue = () => {
   const [activeTab, setActiveTab] = useState();
   const tabs = [
     {
@@ -30,7 +30,7 @@ const UserPostShow = () => {
   ];
   return (
     <div>
-      <div className="flex space-x-14 items-center border-t relative ">
+      <div className="flex space-x-14 items-center justify-center border-t relative ">
         {tabs.map((item) => (
           <div
             className={`${
@@ -56,4 +56,4 @@ const UserPostShow = () => {
   );
 };
 
-export default UserPostShow;
+export default UserProfileMenue;
