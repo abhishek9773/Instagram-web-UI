@@ -11,16 +11,29 @@ import { RiSendPlaneLine } from "react-icons/ri";
 import { FaRegComment } from "react-icons/fa";
 import Comment from "../Comment/Comment";
 import { useDisclosure } from "@chakra-ui/react";
+import PostThreeDot from "../PostThreeDot/PostThreeDot";
 
 const PostCard = () => {
-  const [showDropDown, setShowDropDown] = useState(false);
   const [isPostLike, setIsPostLike] = useState(false);
   const [isSave, setIsSave] = useState(false);
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const {
+    isOpen: isOpenComment,
+    onOpen: onOpenComment,
+    onClose: onCloseComment,
+  } = useDisclosure();
+  const {
+    isOpen: isOpenPostThreeDot,
+    onOpen: onOpenPostThreeDot,
+    onClose: onClosePostThreeDot,
+  } = useDisclosure();
+
+  const handleOpenPostThreeDot = () => {
+    onOpenPostThreeDot();
+  };
 
   const handleOpenComment = () => {
-    onOpen();
+    onOpenComment();
   };
 
   const handleSavePost = () => {
@@ -30,9 +43,7 @@ const PostCard = () => {
   const handlePostLike = () => {
     setIsPostLike(!isPostLike);
   };
-  const handleClick = () => {
-    setShowDropDown(!showDropDown);
-  };
+
   return (
     <div>
       <div className=" border-t">
@@ -46,12 +57,11 @@ const PostCard = () => {
             />
             <div>
               <p className="font-semibold text-sm ">username</p>
-              <p className="font-thin text-sm "> Rohini, Delhi, Bihar</p>
+              <p className="font-thin text-sm "> Rohini, Delhi, India</p>
             </div>
           </div>
           <div>
-            <BsThreeDots onClick={handleClick} />
-            <div className="relative">{showDropDown && <PostDropDown />}</div>
+            <BsThreeDots onClick={handleOpenPostThreeDot} />
           </div>
         </div>
         <div onClick={handleOpenComment} className=" cursor-pointer w-full">
@@ -114,12 +124,13 @@ const PostCard = () => {
       </div>
       <Comment
         handlePostLike={handlePostLike}
-        onClose={onClose}
-        isOpen={isOpen}
+        onClose={onCloseComment}
+        isOpen={isOpenComment}
         handleSavePost={handleSavePost}
         isPostLike={isPostLike}
         isSave={isSave}
       />
+      <PostThreeDot isOpen={isOpenPostThreeDot} onClose={onClosePostThreeDot} />
     </div>
   );
 };
