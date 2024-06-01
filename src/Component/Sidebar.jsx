@@ -52,12 +52,12 @@ const Sidebar = () => {
                 {activeTab === item.title ? item.activeIcon : item.icon}
 
                 {/* <p
-                  className={`${
-                    activeTab === item.title ? "font-bold" : "font-smbold"
-                  }`}
-                >
-                  {item.title}
-                </p> */}
+                    className={`${
+                      activeTab === item.title ? "font-bold" : "font-smbold"
+                    }`}
+                  >
+                    {item.title}
+                  </p> */}
               </div>
             ))}
           </div>
