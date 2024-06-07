@@ -49,7 +49,7 @@ export const mainu = [
     activeIcon: <AiFillHeart className={desine} />,
   },
   {
-    title: "Post",
+    title: "PostCreate",
     icon: <AiOutlinePlusCircle className={desine} />,
     activeIcon: <AiFillPlusCircle className={desine} />,
   },

@@ -26,11 +26,23 @@ const CreatePost = () => {
     <div>
       <div>
         <div>
-          <p onClick={handleOpenPost}> create post </p>
+          <p
+            onClick={handleOpenPost}
+            className="cursor-pointer py-1 px-2 hover:bg-gray-300"
+          >
+            {" "}
+            create post{" "}
+          </p>
           <Post isOpen={isOpenPost} onClose={onClosePost} />
         </div>
         <div>
-          <p onClick={handleOpenLiveVideo}> create LIve vdieo </p>
+          <p
+            onClick={handleOpenLiveVideo}
+            className="cursor-pointer py-1 px-2 hover:bg-gray-300"
+          >
+            {" "}
+            create Live video{" "}
+          </p>
           <LiveVideo isOpen={isOpenLiveVideo} onClose={onCloseLiveVideo} />
         </div>
       </div>
