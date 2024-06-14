@@ -5,6 +5,7 @@ import HomePage from "../HomePage/HomePage";
 import Profile from "../Profile/Profile";
 import DommyModel from "../../Component/CreatePost/DommyModel";
 import Story from "../Story/Story";
+import Search from "../../Component/Search/Search";
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
           <div classsName="">
             <Routes>
               <Route path="/" element={<HomePage />}></Route>
+              <Route path="/search" element={<Search />}></Route>
               <Route path="/profile" element={<Profile />}></Route>
               <Route path="/post" element={<DommyModel />}></Route>
               <Route path="/story" element={<Story />}></Route>

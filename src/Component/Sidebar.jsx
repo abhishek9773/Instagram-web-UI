@@ -6,12 +6,21 @@ import { AiFillInstagram, AiOutlineInstagram } from "react-icons/ai";
 import Post from "./CreatePost/Post";
 import PostOrLiveVideo from "./CreatePost/PostOrLiveVideo";
 import Search from "./Search/Search";
+import { useDisclosure } from "@chakra-ui/react";
 
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState();
   const [isOpen, setIsOpen] = useState(false);
-  const [isSearchVisiable, SetIsSearchVisiable] = useState(false);
+
   const navigate = useNavigate();
+  const {
+    isOpen: searchDrowerisOpen,
+    onOpen: SearchDroweronOpen,
+    onClose: searchDroweronClose,
+  } = useDisclosure();
+  const handleSearch = () => {
+    SearchDroweronOpen();
+  };
   const handleTabClick = (title) => {
     setActiveTab(title);
     if (title === "Profile") {
@@ -31,11 +40,10 @@ const Sidebar = () => {
       navigate("/post");
     }
     if (title === "Search") {
-      SetIsSearchVisiable(true);
-    } else {
-      SetIsSearchVisiable(false);
+      handleSearch();
     }
   };
+
   return (
     <div className="sticky top-0 h-[100vh] flex">
       <div className="flex flex-col justify-between h-full pt-6 px-10">
@@ -73,7 +81,8 @@ const Sidebar = () => {
           <PostOrLiveVideo isOpen={isOpen} />
         </div>
       </div>
-      {isSearchVisiable && <Search />}
+
+      <Search isOpen={searchDrowerisOpen} onClose={searchDroweronClose} />
     </div>
   );
 };
